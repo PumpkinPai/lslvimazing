@@ -1138,7 +1138,7 @@ highlight default link lslComment       Comment
 highlight default link lslCommentMulti  Comment
 
 highlight default link lslFunction      Function
-highlight default link lslEvent         Event
+highlight default link lslEvent         Function
 highlight default link lslConstant      Constant
 highlight default link lslDeprecated    Error
 
