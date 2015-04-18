@@ -3,8 +3,8 @@
 " Language: lsl
 " Maintainer: PumpkinPai <pumpkin@luvotron.com>
 " Last update: 2015-04-18
-" Credits:  
-"         Builder's Brewery maintains a set of lsl syntax files in 
+" Credits:
+"         Builder's Brewery maintains a set of lsl syntax files in
 "               https://github.com/buildersbrewery/lsl-for-vim
 "           and https://github.com/buildersbrewery/linden-scripting-language
 "         The idea for this plugin was ultimately from those projects
@@ -16,7 +16,7 @@ elseif exists("b:current_syntax")
   finish
 endif
 
-" nocompatible mode for lines with backslashes 
+" nocompatible mode for lines with backslashes
 let s:cpo_save = &cpo
 set cpo&vim
 
@@ -24,15 +24,15 @@ set cpo&vim
 
 
 " COMMENTS "
-syntax keyword lslTodo 
-\ todo Todo TODO fixme Fixme FIXME bug Bug BUG xxx XXX 
+syntax keyword lslTodo
+\ todo Todo TODO fixme Fixme FIXME bug Bug BUG xxx XXX
 
 " DEBUGGING "
 syntax keyword lslDebug
 \ debug Debug DEBUG temp Temp TEMP
 
 " FUNCTIONS "
-syn keyword lslFunction 
+syn keyword lslFunction
 \ llAbs
 \ llAcos
 \ llAddToLandBanList
@@ -443,7 +443,7 @@ syn keyword lslFunction
 \ llXorBase64
 
 " EVENTS "
-syn keyword lslEvents
+syn keyword lslEvent
 \ attach
 \ at_rot_target
 \ at_target
@@ -1097,7 +1097,7 @@ syn keyword lslType
 
 " LABELS "
 syn keyword lslLabel
-\ state default 
+\ state default
 
 " DISPLAYS "
 syn match lslNumber display
@@ -1107,7 +1107,7 @@ syn region lslString display
 \ start='"' skip='//.' end='"' contains=lslStringEscape, @Spell
 
 syn region lslStringEscape display
-\ /\t\|\n/
+\ /\\t|\\n/
 
 syn region lslBlock display
 \ start='{' end='}' fold transparent contains=ALL
@@ -1133,19 +1133,19 @@ syn match lslOperator display
 
 " HIGHLIGHTING "
 highlight default link lslTodo          Todo
-highlight default link lslDebug         Special 
+highlight default link lslDebug         Special
 highlight default link lslComment       Comment
 highlight default link lslCommentMulti  Comment
 
 highlight default link lslFunction      Function
-highlight default link lslEvent         Event 
-highlight default link lslConstant      Constant 
+highlight default link lslEvent         Event
+highlight default link lslConstant      Constant
 highlight default link lslDeprecated    Error
 
-highlight default link lslType          Type 
+highlight default link lslType          Type
 highlight default link lslConditional   Conditional
 highlight default link lslRepeat        Repeat
-highlight default link lslLabel         Label 
+highlight default link lslLabel         Label
 highlight default link lslOperator      Operator
 
 highlight default link lslString        String
@@ -1154,9 +1154,9 @@ highlight default link lslNumber        Number
 highlight default link lslKey           Special
 highlight default link lslState         Label
 
-highlight default link lslParen         Special 
-highlight default link lslBlock         Special 
-highlight default link lslList          Special 
+highlight default link lslParen         Special
+highlight default link lslBlock         Special
+highlight default link lslList          Special
 
 
 let b:current_syntax = "lsl"
