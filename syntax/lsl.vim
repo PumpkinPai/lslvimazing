@@ -1106,7 +1106,7 @@ syn match lslNumber display
 syn region lslString display
 \ start='"' skip='//.' end='"' contains=lslStringEscape, @Spell
 
-syn region lslStringEscape display
+syn match lslStringEscape display
 \ /\\t|\\n/
 
 syn region lslBlock display
