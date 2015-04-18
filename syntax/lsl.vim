@@ -29,7 +29,7 @@ syntax keyword lslTodo
 
 " DEBUGGING "
 syntax keyword lslDebug
-debug Debug DEBUG temp Temp TEMP
+\ debug Debug DEBUG temp Temp TEMP
 
 " FUNCTIONS "
 syn keyword lslFunction 
@@ -1133,7 +1133,7 @@ syn match lslOperator display
 
 " HIGHLIGHTING "
 highlight default link lslTodo          Todo
-highlight default link lslDebug         Debug
+highlight default link lslDebug         Special 
 highlight default link lslComment       Comment
 highlight default link lslCommentMulti  Comment
 

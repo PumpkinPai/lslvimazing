@@ -11,5 +11,4 @@ function! LSLIndent()
     return indent(previousNum) + &tabstop
   endif
 
-  ...
 endfunction
