@@ -2,7 +2,7 @@
 " LSL Syntax File
 " Language: lsl
 " Maintainer: PumpkinPai <pumpkin@luvotron.com>
-" Last update: 2015-04-18
+" Last update: 2015-04-22
 " Credits:
 "         Builder's Brewery maintains a set of lsl syntax files in
 "               https://github.com/buildersbrewery/lsl-for-vim
@@ -150,6 +150,7 @@ syn keyword lslFunction
 \ llGetLinkName
 \ llGetLinkNumber
 \ llGetLinkNumberOfSides
+\ llGetLinkPrimitiveParams
 \ llGetListEntryType
 \ llGetListLength
 \ llGetLocalPos
@@ -238,6 +239,7 @@ syn keyword lslFunction
 \ llKey2Name
 \ llKeyCountKeyValue
 \ llKeysKeyValue
+\ llLinkParticleSystem
 \ llLinkSitTarget
 \ llList2CSV
 \ llList2Float
@@ -374,6 +376,8 @@ syn keyword lslFunction
 \ llSetPayPrice
 \ llSetPhysicsMaterial
 \ llSetPos
+\ llSetLinkPrimitiveParams
+\ llSetLinkPrimitiveParamsFast
 \ llSetPrimitiveParams
 \ llSetPrimMediaParams
 \ llSetRegionPos
@@ -721,11 +725,11 @@ syn keyword lslConstant
 \ OBJECT_CREATOR
 \ OBJECT_DESC
 \ OBJECT_GROUP
+\ OBJECT_HOVER_HEIGHT
 \ OBJECT_NAME
 \ OBJECT_OWNER
 \ OBJECT_PATHFINDING_TYPE
 \ OBJECT_PHANTOM
-\ OBJECT_HOVER_HEIGHT
 \ OBJECT_PHYSICS
 \ OBJECT_PHYSICS_COST
 \ OBJECT_POS
@@ -984,6 +988,7 @@ syn keyword lslConstant
 \ STRING_TRIM
 \ STRING_TRIM_HEAD
 \ STRING_TRIM_TAIL
+\ TEXTURE_DEFAULT
 \ TEXTURE_BLANK
 \ TEXTURE_MEDIA
 \ TEXTURE_PLYWOOD

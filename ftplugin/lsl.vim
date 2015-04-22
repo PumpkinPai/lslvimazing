@@ -10,3 +10,7 @@ setlocal autoindent
 
 setlocal foldenable
 setlocal foldmethod=syntax
+
+" Sync any saved lsl file to the directory specified in vimrc if 
+" one was specified.  Ignore if none
+" Long haul ahead... Vimscript, you beast.
