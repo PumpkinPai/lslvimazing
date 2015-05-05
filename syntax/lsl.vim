@@ -2,7 +2,7 @@
 " LSL Syntax File
 " Language: lsl
 " Maintainer: PumpkinPai <pumpkin@luvotron.com>
-" Last update: 2015-04-22
+" Last update: 2015-05-04
 " Credits:
 "         Builder's Brewery maintains a set of lsl syntax files in
 "               https://github.com/buildersbrewery/lsl-for-vim
@@ -726,6 +726,7 @@ syn keyword lslConstant
 \ OBJECT_DESC
 \ OBJECT_GROUP
 \ OBJECT_HOVER_HEIGHT
+\ OBJECT_LAST_OWNER_ID
 \ OBJECT_NAME
 \ OBJECT_OWNER
 \ OBJECT_PATHFINDING_TYPE
@@ -1094,7 +1095,7 @@ syn keyword lslRepeat
 syn keyword lslType
 \ key
 \ string
-\ ist
+\ list
 \ integer
 \ float
 \ vector
@@ -1111,6 +1112,7 @@ syn match lslNumber display
 syn region lslString display
 \ start='"' skip='//.' end='"' contains=lslStringEscape, @Spell
 
+" bug-
 syn match lslStringEscape display
 \ /\\t|\\n/
 
@@ -1133,8 +1135,10 @@ syn region lslCommentMulti display
 \ start='\/\*' end='\*\/' contains=lslTodo,@Spell
 
 syn match lslOperator display
-\ /[!%<>=*\+\-\/\|&\?\^~]/
+\ /[!%<>=*\+\-\|&\?\^~]/
 
+syn match lslOperator display
+\ /\/\(\/\)\@!/
 
 " HIGHLIGHTING "
 highlight default link lslTodo          Todo

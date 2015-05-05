@@ -13,4 +13,10 @@ setlocal foldmethod=syntax
 
 " Sync any saved lsl file to the directory specified in vimrc if 
 " one was specified.  Ignore if none
+autocmd BufWrite *.lsl :write save.lsl
+
+" Optional remaps
+autocmd FileType lsl    nnoremap <buffer> <localleader>c I//<Esc>
+autocmd FileType lsl    :iabbrev <buffer> iff if ()<Left>
+
 " Long haul ahead... Vimscript, you beast.
