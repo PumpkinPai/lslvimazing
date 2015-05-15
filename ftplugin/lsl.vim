@@ -13,7 +13,12 @@ setlocal foldmethod=syntax
 
 " Sync any saved lsl file to the directory specified in vimrc if 
 " one was specified.  Ignore if none
-autocmd BufWrite *.lsl :write save.lsl
+echom strpart(getline(2),2)
+if strpart(getline(2),2) == "backup"
+    let b:backupname = strpart(getline(1), 2)
+    echom "Will be backed up as: " . b:backupname
+    autocmd BufWrite *.lsl :write! b:backupname
+endif
 
 " Optional remaps
 autocmd FileType lsl    nnoremap <buffer> <localleader>c I//<Esc>

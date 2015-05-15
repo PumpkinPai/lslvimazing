@@ -2,12 +2,12 @@
 
 setlocal indentexpr=lslIndent()
 
-function! LSLIndent()
+function! lslIndent()
   let line = getline(v:lnum)
   let previousNum = prevnonblank(v:lnum - 1)
-  let previousLine = getline(previousNum)
+  let previous = getline(previousNum)
 
-  if previousLine =~ "{" && previous !~ "}" && line !~ "}" && line !~ ":$"
+  if previous =~ "{" && previous !~ "}" && line !~ "}" && line !~ ":$"
     return indent(previousNum) + &tabstop
   endif
 
