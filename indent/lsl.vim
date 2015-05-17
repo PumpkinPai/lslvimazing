@@ -1,8 +1,8 @@
 " indent/lsl.vim
 
-setlocal indentexpr=lslIndent()
+setlocal indentexpr=LSLIndent()
 
-function! lslIndent()
+function! LSLIndent()
   let line = getline(v:lnum)
   let previousNum = prevnonblank(v:lnum - 1)
   let previous = getline(previousNum)
