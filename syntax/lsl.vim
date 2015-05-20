@@ -2,7 +2,7 @@
 " LSL Syntax File
 " Language: lsl
 " Maintainer: PumpkinPai <pumpkin@luvotron.com>
-" Last update: 2015-05-16
+" Last update: 2015-05-19
 " Credits:
 "         Builder's Brewery maintains a set of lsl syntax files in
 "               https://github.com/buildersbrewery/lsl-for-vim
@@ -1009,6 +1009,7 @@ syn keyword lslConstant
 \ TYPE_VECTOR
 \ URL_REQUEST_DENIED
 \ URL_REQUEST_GRANTED
+\ VEHICLE_FLAG_NO_FLY_UP
 \ VEHICLE_ANGULAR_DEFLECTION_EFFICIENCY
 \ VEHICLE_ANGULAR_DEFLECTION_TIMESCALE
 \ VEHICLE_ANGULAR_FRICTION_TIMESCALE
