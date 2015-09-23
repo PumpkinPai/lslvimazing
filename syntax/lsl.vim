@@ -2,7 +2,7 @@
 " LSL Syntax File
 " Language: lsl
 " Maintainer: PumpkinPai <pumpkin@luvotron.com>
-" Last update: 2015-09-22
+" Last update: 2015-09-23
 " Credits:
 "         Builder's Brewery maintains a set of lsl syntax files in
 "               https://github.com/buildersbrewery/lsl-for-vim
@@ -118,6 +118,7 @@ syn keyword lslFunction
 \ llGetAnimationList
 \ llGetAnimationOverride
 \ llGetAttached
+\ llGetAttachedList
 \ llGetBoundingBox
 \ llGetCameraPos
 \ llGetCameraRot
@@ -605,6 +606,7 @@ syn keyword lslConstant
 \ CLICK_ACTION_PLAY
 \ CLICK_ACTION_SIT
 \ CLICK_ACTION_TOUCH
+\ CLICK_ACTION_ZOOM
 \ CONTENT_TYPE_ATOM
 \ CONTENT_TYPE_FORM
 \ CONTENT_TYPE_HTML
@@ -722,6 +724,7 @@ syn keyword lslConstant
 \ OBJECT_ATTACHED_POINT
 \ OBJECT_BODY_SHAPE_TYPE
 \ OBJECT_CHARACTER_TIME
+\ OBJECT_CLICK_ACTION
 \ OBJECT_CREATOR
 \ OBJECT_DESC
 \ OBJECT_GROUP
