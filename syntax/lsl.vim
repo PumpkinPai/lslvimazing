@@ -2,7 +2,7 @@
 " LSL Syntax File
 " Language: lsl
 " Maintainer: PumpkinPai <pumpkin@luvotron.com>
-" Last update: 2015-11-30
+" Last update: 2015-12-01
 " Credits:
 "         Builder's Brewery maintains a set of lsl syntax files in
 "               https://github.com/buildersbrewery/lsl-for-vim
@@ -731,6 +731,7 @@ syn keyword lslConstant
 \ OBJECT_HOVER_HEIGHT
 \ OBJECT_LAST_OWNER_ID
 \ OBJECT_NAME
+\ OBJECT_OMEGA
 \ OBJECT_OWNER
 \ OBJECT_PATHFINDING_TYPE
 \ OBJECT_PHANTOM
