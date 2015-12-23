@@ -2,7 +2,7 @@
 " LSL Syntax File
 " Language: lsl
 " Maintainer: PumpkinPai <pumpkin@luvotron.com>
-" Last update: 2015-12-22
+" Last update: 2015-12-23
 " Credits:
 "         Builder's Brewery maintains a set of lsl syntax files in
 "               https://github.com/buildersbrewery/lsl-for-vim
