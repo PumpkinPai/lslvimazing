@@ -2,7 +2,7 @@
 " LSL Syntax File
 " Language: lsl
 " Maintainer: PumpkinPai <pumpkin@luvotron.com>
-" Last update: 2016-01-02
+" Last update: 2016-01-03
 " Credits:
 "         Builder's Brewery maintains a set of lsl syntax files in
 "               https://github.com/buildersbrewery/lsl-for-vim
@@ -806,6 +806,9 @@ syn keyword lslConstant
 \ PARCEL_MEDIA_COMMAND_UNLOAD
 \ PARCEL_MEDIA_COMMAND_URL
 \ PASSIVE
+\ PASS_ALWAYS
+\ PASS_IF_NOT_HANDLED
+\ PASS_NEVER
 \ PATROL_PAUSE_AT_WAYPOINTS
 \ PAYMENT_INFO_ON_FILE
 \ PAYMENT_INFO_USED
