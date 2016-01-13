@@ -11,6 +11,8 @@ setlocal autoindent
 setlocal foldenable
 setlocal foldmethod=syntax
 
+setlocal commentstring=//\ %s
+
 " Sync any saved lsl file to the directory specified in vimrc if 
 " one was specified.  Ignore if none
 " echom strpart(getline(2),2)
