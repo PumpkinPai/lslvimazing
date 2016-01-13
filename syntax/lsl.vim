@@ -1123,7 +1123,7 @@ syn region lslString display
 syn match lslStringEscape display
 \ /\\t\|\\n/
 
-syn region lslBlock
+syn region lslBlock display
 \ start='{' end='}' fold transparent contains=ALL
 
 syn region lslParen display
