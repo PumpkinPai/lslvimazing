@@ -1,7 +1,7 @@
 # lslvimazing
 LSL-VIM Syntax Plugin
 
-Last update: 2016-01-16
+Last update: 2016-01-17
 
 **Features**
 * Uses the latest and greatest versions of LSL functions, constants and events straight from the official [LSL Wiki] (http://wiki.secondlife.com/wiki/LSL_Portal)
