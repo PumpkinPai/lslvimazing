@@ -2,7 +2,7 @@
 " LSL Syntax File
 " Language: lsl
 " Maintainer: PumpkinPai <pumpkin@luvotron.com>
-" Last update: 2016-03-27
+" Last update: 2018-05-14
 " Credits:
 "         Builder's Brewery maintains a set of lsl syntax files in
 "               https://github.com/buildersbrewery/lsl-for-vim
@@ -261,6 +261,7 @@ syn keyword lslFunction
 \ llListReplaceList
 \ llListSort
 \ llListStatistics
+\ llRequestUserKey
 \ llLoadURL
 \ llLog
 \ llLog10
@@ -277,6 +278,7 @@ syn keyword lslFunction
 \ llModifyLand
 \ llModPow
 \ llMoveToTarget
+\ llName2Key
 \ llNavigateTo
 \ llOffsetTexture
 \ llOpenRemoteDataChannel
@@ -406,6 +408,7 @@ syn keyword lslFunction
 \ llSHA1String
 \ llShout
 \ llSin
+\ llSitOnLink
 \ llSitTarget
 \ llSleep
 \ llSqrt
@@ -651,12 +654,14 @@ syn keyword lslConstant
 \ FALSE
 \ FORCE_DIRECT_PATH
 \ HORIZONTAL
+\ HTTP_ACCEPT
 \ HTTP_BODY_MAXLENGTH
 \ HTTP_BODY_TRUNCATED
 \ HTTP_CUSTOM_HEADER
 \ HTTP_METHOD
 \ HTTP_MIMETYPE
 \ HTTP_PRAGMA_NO_CACHE
+\ HTTP_USER_AGENT
 \ HTTP_VERBOSE_THROTTLE
 \ HTTP_VERIFY_CERT
 \ INVENTORY_ALL
@@ -738,6 +743,7 @@ syn keyword lslConstant
 \ OBJECT_PHYSICS
 \ OBJECT_PHYSICS_COST
 \ OBJECT_POS
+\ OBJECT_PRIM_COUNT
 \ OBJECT_PRIM_EQUIVALENCE
 \ OBJECT_RENDER_WEIGHT
 \ OBJECT_RETURN_PARCEL
@@ -751,6 +757,7 @@ syn keyword lslConstant
 \ OBJECT_SERVER_COST
 \ OBJECT_STREAMING_COST
 \ OBJECT_TEMP_ON_REZ
+\ OBJECT_TOTAL_INVENTORY_COUNT
 \ OBJECT_TOTAL_SCRIPT_COUNT
 \ OBJECT_UNKNOWN_DETAIL
 \ OBJECT_VELOCITY
@@ -833,6 +840,7 @@ syn keyword lslConstant
 \ PI
 \ PING_PONG
 \ PI_BY_TWO
+\ PRIM_ALLOW_UNSIT
 \ PRIM_ALPHA_MODE
 \ PRIM_ALPHA_MODE_BLEND
 \ PRIM_ALPHA_MODE_EMISSIVE
@@ -908,6 +916,7 @@ syn keyword lslConstant
 \ PRIM_POS_LOCAL
 \ PRIM_ROTATION
 \ PRIM_ROT_LOCAL
+\ PRIM_SCRIPTED_SIT_ONLY
 \ PRIM_SCULPT_FLAG_INVERT
 \ PRIM_SCULPT_FLAG_MIRROR
 \ PRIM_SCULPT_TYPE_CYLINDER
@@ -919,6 +928,7 @@ syn keyword lslConstant
 \ PRIM_SHINY_LOW
 \ PRIM_SHINY_MEDIUM
 \ PRIM_SHINY_NONE
+\ PRIM_SIT_TARGET
 \ PRIM_SIZE
 \ PRIM_SLICE
 \ PRIM_SPECULAR
