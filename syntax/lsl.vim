@@ -2,7 +2,7 @@
 " LSL Syntax File
 " Language: lsl
 " Maintainer: PumpkinPai <pumpkin@luvotron.com>
-" Last update: 2018-05-14
+" Last update: 2018-09-10
 " Credits:
 "         Builder's Brewery maintains a set of lsl syntax files in
 "               https://github.com/buildersbrewery/lsl-for-vim
@@ -166,6 +166,7 @@ syn keyword lslFunction
 \ llGetNumberOfNotecardLines
 \ llGetNumberOfPrims
 \ llGetNumberOfSides
+\ llGetObjectAnimationNames
 \ llGetObjectDesc
 \ llGetObjectDetails
 \ llGetObjectMass
@@ -413,10 +414,12 @@ syn keyword lslFunction
 \ llSleep
 \ llSqrt
 \ llStartAnimation
+\ llStartObjectAnimation
 \ llStopAnimation
 \ llStopHover
 \ llStopLookAt
 \ llStopMoveToTarget
+\ llStopObjectAnimation
 \ llStopSound
 \ llStringLength
 \ llStringToBase64
