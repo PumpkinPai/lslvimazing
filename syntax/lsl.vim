@@ -1152,7 +1152,7 @@ syn region lslComment display
 \ start='\/\/' end='$' contains=lslTodo,@Spell
 
 syn region lslCommentMulti display
-\ start='\/\*' end='\*\/' contains=lslTodo,@Spell
+\ start='\/\*' skip='$' end='\*\/' contains=lslTodo,@Spell
 
 syn match lslOperator display
 \ /[!%<>=*\+\-\|&\?\^~]/
