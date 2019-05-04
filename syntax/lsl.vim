@@ -32,8 +32,17 @@ syntax keyword lslDebug
 \ debug Debug DEBUG temp Temp TEMP
 
 " PREPROCESSOR "
-syntax match lslPreprocessorCommand
-\ /#define.*\|#undef.*\|#ifdef.*\|#ifndef.*\|#if.*\|#elif.*\|#else.*\|#endif.*\|#warning.*\|#error.*\|#include.*/
+syntax match lslDefine
+\ /#define.*\|#undef.*/
+
+syntax match lslInclude
+\ /#include.*/
+
+syntax match lslPreCondit
+\ /#ifdef.*\|#ifndef.*\|#if.*\|#elif.*\|#else.*\|#endif.*/
+
+syntax match lslPreProc
+\ /#pragma.*\|#line.*\|#warning.*\|#error.*/
 
 " FUNCTIONS "
 syn keyword lslFunction
@@ -1165,7 +1174,10 @@ syn match lslOperator display
 \ /\/\(\/\)\@!/
 
 " HIGHLIGHTING "
-highlight default link lslPreprocessorCommand Conditional
+highlight default link lslDefine        Macro
+highlight default link lslInclude       Include
+highlight default link lslPreCondit     PreCondit
+highlight default link lslPreProc       PreProc
 
 highlight default link lslTodo          Todo
 highlight default link lslDebug         Special
