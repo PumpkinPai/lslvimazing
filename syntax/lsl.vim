@@ -33,24 +33,28 @@ syntax keyword lslDebug
 
 " PREPROCESSOR "
 syntax region lslDefine
-\ start='#define.*\|#undef.*' 
+\ start='^\s*\(#\)\s*\(define\|undef\)\>' 
 \ end='$'
 \ contains=lslComment,lslCommentMulti,lslString
+\ keepend
 
 syntax region lslInclude
-\ start='#include.*' 
+\ start='^\s*\(#\)\s*\(include\)\>' 
 \ end='$'
 \ contains=lslComment,lslCommentMulti,lslString
+\ keepend
 
 syntax region lslPreCondit
-\ start='#ifdef.*\|#ifndef.*\|#if.*\|#elif.*\|#else.*\|#endif.*' 
+\ start='^\s*\(#\)\s*\(ifdef\|ifndef\|if\|elif\|else\|endif\)\>' 
 \ end='$'
 \ contains=lslComment,lslCommentMulti
+\ keepend
 
 syntax region lslPreProc
-\ start='#pragma.*\|#line.*\|#warning.*\|#error.*' 
+\ start='^\s*\(#\)\s*\(pragma\|line\|warning\|error\)\>' 
 \ end='$'
 \ contains=lslComment,lslCommentMulti
+\ keepend
 
 " FUNCTIONS "
 syn keyword lslFunction
