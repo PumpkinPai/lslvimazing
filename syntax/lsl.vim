@@ -35,7 +35,7 @@ syntax keyword lslDebug
 syntax region lslDefine
 \ start='^\s*\(#\)\s*\(define\|undef\)\>' 
 \ end='$'
-\ contains=lslComment,lslCommentMulti,lslString
+\ contains=lslComment,lslCommentMulti,lslString,lslNumber
 \ keepend
 
 syntax region lslInclude
@@ -47,13 +47,13 @@ syntax region lslInclude
 syntax region lslPreCondit
 \ start='^\s*\(#\)\s*\(ifdef\|ifndef\|if\|elif\|else\|endif\)\>' 
 \ end='$'
-\ contains=lslComment,lslCommentMulti
+\ contains=lslComment,lslCommentMulti,lslString,lslNumber
 \ keepend
 
 syntax region lslPreProc
 \ start='^\s*\(#\)\s*\(pragma\|line\|warning\|error\)\>' 
 \ end='$'
-\ contains=lslComment,lslCommentMulti
+\ contains=lslComment,lslCommentMulti,lslString,lslNumber
 \ keepend
 
 " FUNCTIONS "
