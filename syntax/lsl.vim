@@ -31,6 +31,10 @@ syntax keyword lslTodo
 syntax keyword lslDebug
 \ debug Debug DEBUG temp Temp TEMP
 
+" PREPROCESSOR "
+syntax match lslPreprocessorCommand
+\ /#define.*\|#undef.*\|#ifdef.*\|#ifndef.*\|#if.*\|#elif.*\|#else.*\|#endif.*\|#warning.*\|#error.*\|#include.*/
+
 " FUNCTIONS "
 syn keyword lslFunction
 \ llAbs
@@ -1161,6 +1165,8 @@ syn match lslOperator display
 \ /\/\(\/\)\@!/
 
 " HIGHLIGHTING "
+highlight default link lslPreprocessorCommand Conditional
+
 highlight default link lslTodo          Todo
 highlight default link lslDebug         Special
 highlight default link lslComment       Comment
