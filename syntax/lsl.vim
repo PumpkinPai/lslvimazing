@@ -35,12 +35,12 @@ syntax keyword lslDebug
 syntax region lslDefine
 \ start='#define.*\|#undef.*' 
 \ end='$'
-\ contains=lslComment,lslCommentMulti
+\ contains=lslComment,lslCommentMulti,lslString
 
 syntax region lslInclude
 \ start='#include.*' 
 \ end='$'
-\ contains=lslComment,lslCommentMulti
+\ contains=lslComment,lslCommentMulti,lslString
 
 syntax region lslPreCondit
 \ start='#ifdef.*\|#ifndef.*\|#if.*\|#elif.*\|#else.*\|#endif.*' 
