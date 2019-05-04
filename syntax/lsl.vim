@@ -32,17 +32,25 @@ syntax keyword lslDebug
 \ debug Debug DEBUG temp Temp TEMP
 
 " PREPROCESSOR "
-syntax match lslDefine
-\ /#define.*\|#undef.*/
+syntax region lslDefine
+\ start='#define.*\|#undef.*' 
+\ end='$'
+\ contains=lslComment,lslCommentMulti
 
-syntax match lslInclude
-\ /#include.*/
+syntax region lslInclude
+\ start='#include.*' 
+\ end='$'
+\ contains=lslComment,lslCommentMulti
 
-syntax match lslPreCondit
-\ /#ifdef.*\|#ifndef.*\|#if.*\|#elif.*\|#else.*\|#endif.*/
+syntax region lslPreCondit
+\ start='#ifdef.*\|#ifndef.*\|#if.*\|#elif.*\|#else.*\|#endif.*' 
+\ end='$'
+\ contains=lslComment,lslCommentMulti
 
-syntax match lslPreProc
-\ /#pragma.*\|#line.*\|#warning.*\|#error.*/
+syntax region lslPreProc
+\ start='#pragma.*\|#line.*\|#warning.*\|#error.*' 
+\ end='$'
+\ contains=lslComment,lslCommentMulti
 
 " FUNCTIONS "
 syn keyword lslFunction
