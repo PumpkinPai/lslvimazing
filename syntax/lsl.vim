@@ -1161,7 +1161,7 @@ syn match lslOperator display
 \ /[!%<>=*\+\-\|&\?\^~]/
 
 syn match lslOperator display
-\ /\/\(\/\)\@!/
+\ /\/\(\/\)@!/
 
 " HIGHLIGHTING "
 highlight default link lslTodo          Todo
