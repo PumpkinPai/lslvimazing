@@ -31,6 +31,31 @@ syntax keyword lslTodo
 syntax keyword lslDebug
 \ debug Debug DEBUG temp Temp TEMP
 
+" PREPROCESSOR "
+syntax region lslDefine
+\ start='^\s*\(#\)\s*\(define\|undef\)\>' 
+\ end='$'
+\ contains=lslComment,lslCommentMulti,lslString,lslNumber
+\ keepend
+
+syntax region lslInclude
+\ start='^\s*\(#\)\s*\(include\)\>' 
+\ end='$'
+\ contains=lslComment,lslCommentMulti,lslString
+\ keepend
+
+syntax region lslPreCondit
+\ start='^\s*\(#\)\s*\(ifdef\|ifndef\|if\|elif\|else\|endif\)\>' 
+\ end='$'
+\ contains=lslComment,lslCommentMulti,lslString,lslNumber
+\ keepend
+
+syntax region lslPreProc
+\ start='^\s*\(#\)\s*\(pragma\|line\|warning\|error\)\>' 
+\ end='$'
+\ contains=lslComment,lslCommentMulti,lslString,lslNumber
+\ keepend
+
 " FUNCTIONS "
 syn keyword lslFunction
 \ llAbs
@@ -1164,6 +1189,11 @@ syn match lslOperator display
 \ /\/\(\/\)@!/
 
 " HIGHLIGHTING "
+highlight default link lslDefine        Macro
+highlight default link lslInclude       Include
+highlight default link lslPreCondit     PreCondit
+highlight default link lslPreProc       PreProc
+
 highlight default link lslTodo          Todo
 highlight default link lslDebug         Special
 highlight default link lslComment       Comment
