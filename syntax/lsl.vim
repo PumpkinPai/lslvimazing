@@ -1130,6 +1130,9 @@ syn keyword lslLabel
 syn match lslNumber display
 \ /\(\(\s\+\)\([0-9]*\)\(\.\?\)\([0-9]\+\)\>\)/
 
+syn match lslNumber	display
+\ /0x\x\+\(u\=l\{0,2}\|ll\=u\)\>/
+
 syn region lslString display
 \ start='"' skip='//.' end='"' contains=lslStringEscape, @Spell
 
