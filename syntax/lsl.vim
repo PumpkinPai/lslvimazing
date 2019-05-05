@@ -1128,7 +1128,10 @@ syn keyword lslLabel
 
 " DISPLAYS "
 syn match lslNumber display
-\ /[0-9]/
+\ /\A\(\([0-9]*\)\(\.\?\)\([0-9]\+\)\>\)/
+
+syn match lslNumber	display
+\ /0x\x\+\(u\=l\{0,2}\|ll\=u\)\>/
 
 syn region lslString display
 \ start='"' skip='//.' end='"' contains=lslStringEscape, @Spell
